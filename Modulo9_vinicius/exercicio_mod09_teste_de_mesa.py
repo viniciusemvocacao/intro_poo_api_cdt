@@ -7,19 +7,19 @@ class Celular:
 
   def fazer_chamada(self, duracao):
 
-  try:
+   try:
 
-   gasto = int(duracao) * 2
+    gasto = int(duracao) * 2
 
-   if self.bateria >= gasto:
+    if self.bateria >= gasto:
       self.bateria -= gasto
       print(f"chamada de {duracao} min feita! Bateria: {self.bateria}%")
-   else:
+    else:
 
       print("Bateria insufisciente.")
-  except ValueError:
+   except ValueError:
   
-   print("Erro: a duração deve ser um número inteiro!")
+    print("Erro: a duração deve ser um número inteiro!")
   
 meu_celular = Celular("Samsung", "S24")
 meu_celular.fazer_chamada("Dez") # Teste de erro

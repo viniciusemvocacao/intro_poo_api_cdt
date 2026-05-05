@@ -1,21 +1,21 @@
 def aula_tratamento_erro():
    
-try:
+ try:
    
    numerador = int(input("Digita o numerador"))
    denominador = int(input("Digita o denominador:"))
    resultado = numerador / denominador
 
-except ValueError:
+ except ValueError:
    
    print("Erro: Digita apenas o números inteiros!")
-except ZeroDivisionError:
+ except ZeroDivisionError:
    print ("Erro: não podes dividir por zero.")
-except Exception as erro:
+ except Exception as erro:
    print(f"Erro inesperado:{erro}")
-else:
+ else:
    print(f"Sucesso! Resultado: {resultado}")
-finally:
+ finally:
    print("---Fim da divisão---")
 
 aula_tratamento_erro()
